@@ -6,9 +6,7 @@ const StarshipCard = ({ starship }) => {
   console.log("my name is", starship.name);
   return (
     <section>
-      <h2>starships</h2>
       <ul>
-    
         <li>name: {starship.name}</li>
         <li>model: {starship.model}</li>
         <li>class: {starship.starship_class}</li>

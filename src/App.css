@@ -17,6 +17,8 @@ main {
   border-radius: 8px;
   background-color: #333333;
   border: 1px solid rgb(160, 160, 160);
+
+
   }
   
   form {
@@ -32,4 +34,7 @@ main {
   padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid rgb(160, 160, 160);
+  }
+  section{
+    border: wheat solid 1px;
   }

@@ -1,5 +1,5 @@
 // src/App.jsx
-
+import "./App.css"
 import { useEffect, useState } from "react";
 // import StarShipList from "./components/StarshipList";
 import StarshipSearch from "./components/StarshipSearch";
