@@ -6,7 +6,9 @@ const StarshipSearch = ({ getStarShip }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     getStarShip(ship);
+      // console.log("im search im sending",ship)
     setShip("");
+  
   };
 
   return (

@@ -6,9 +6,10 @@ const StarshipList = ({ starShips }) => {
   // console.log("mamamia",starShips)
   return (
     <section>
-      {starShips.map(ship => (
-  <StarShipCard key={ship.url} starship={ship} />
-))}
+      <h3>total ships is {starShips.length}</h3>
+      {starShips.map((ship) => {return <StarShipCard  starship={ship} />}
+  
+)}
     </section>
   );
 };

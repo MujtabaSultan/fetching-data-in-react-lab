@@ -12,28 +12,54 @@ const App = () => {
   const getStarShip = async (starShip) => {
     const data = await starWarService.showAll();
 
-    data.results.map((ship)=>{
+    const rightData = data.results.filter((item) => {
+      //  console.log("me item boy",item)
+      return item.name == starShip;
+    });
 
+    console.log("mamamia im right", rightData);
+    data.results.map((ship) => {
       const newStarShip = {
-      name: ship.name,
-      class: ship.class,
-      manufacturer: ship.manufacturer,
-      model: ship.model,
-    };
+        name: ship.name,
+        starship_class: ship.starship_class,
+        manufacturer: ship.manufacturer,
+        model: ship.model,
+      };
 
-    setStarships([...starships,newStarShip]);
-    })
-    
+      setStarships( rightData );
+    });
   };
+  console.log("this is the right data ", starships);
 
   useEffect(() => {
-    getStarShip("9");
+  //--------------------------
+
+const startingSite = async ()=>{
+
+  const data = await starWarService.showAll();
+  const startingArray=data.results.map((ship) => ({
+   
+      name: ship.name,
+      starship_class: ship.starship_class,
+      manufacturer: ship.manufacturer,
+      model: ship.model,
+  }));
+  setStarships( startingArray );
+console.log("we starting with ", starships)
+   return <StarshipList starShips={starships} />
+  
+ 
+
+}
+startingSite()
+  
+  //------------------------
   }, []);
-  useEffect(() => {}, [starships]);
+
 
   return (
     <main>
-      <h1>Hello world!</h1>
+      <h1>star wars api!</h1>
       <StarshipSearch getStarShip={getStarShip} />
       <StarshipList starShips={starships} />
     </main>
