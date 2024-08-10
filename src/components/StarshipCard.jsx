@@ -6,12 +6,12 @@ const StarshipCard = ({ starship }) => {
   console.log("my name is", starship.name);
   return (
     <section>
-      <ul>
-        <li>name: {starship.name}</li>
-        <li>model: {starship.model}</li>
-        <li>class: {starship.starship_class}</li>
-        <li>manufacturer: {starship.manufacturer}</li>
-      </ul>
+      <li>
+        <p>name: {starship.name}</p>
+        <p>model: {starship.model}</p>
+        <p>class: {starship.starship_class}</p>
+        <p>manufacturer: {starship.manufacturer}</p>
+      </li>
     </section>
   );
 };
